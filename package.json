@@ -1,0 +1,47 @@
+{
+  "name": "customer-platform-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Customer Entitlement & Support Case API with an MCP server for the Support Copilot",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "start:mocks": "node src/mocks/standalone.js",
+    "dev": "node src/index.js | pino-pretty",
+    "test": "node --test --test-concurrency=1 'tests/**/*.test.js'",
+    "test:unit": "node --test 'tests/unit/*.test.js'",
+    "test:contract": "node --test 'tests/contract/*.test.js'",
+    "test:mcp": "node --test 'tests/mcp/*.test.js'",
+    "test:postman": "node scripts/postman-env.js && newman run postman/collection.json -e postman/environment.local.json",
+    "lint:spec": "node scripts/lint-spec.js",
+    "token": "node scripts/token.js",
+    "mcp": "node mcp/server.js",
+    "demo": "node mcp/demo.js",
+    "demo:offline": "node mcp/demo-offline.js",
+    "evals": "node mcp/evals/run.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.14.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "csv-parse": "^7.0.3",
+    "express": "^5.3.0",
+    "fast-xml-parser": "^5.12.1",
+    "jose": "^6.2.18",
+    "pino": "^10.4.0",
+    "pino-http": "^11.0.0",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@seriousme/openapi-schema-validator": "^2.12.0",
+    "newman": "^6.2.3",
+    "pino-pretty": "^13.2.0",
+    "supertest": "^7.3.2"
+  }
+}

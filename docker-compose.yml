@@ -1,0 +1,25 @@
+# Alternative to `make run`: the API and the mock upstreams as separate containers.
+services:
+  mocks:
+    build: .
+    command: ["node", "src/mocks/standalone.js"]
+    environment:
+      MOCKS_PORT: "4010"
+    ports: ["4010:4010"]
+
+  api:
+    build: .
+    depends_on: [mocks]
+    environment:
+      EMBED_MOCKS: "false"
+      CASES_URL: http://mocks:4010/crm
+      ENTITLEMENTS_URL: http://mocks:4010/erp
+      USAGE_URL: http://mocks:4010/warehouse
+      WEBHOOK_DEV_SUBSCRIBER_URL: http://mocks:4010/consumer/webhooks/case-escalated
+      DB_PATH: /app/var/platform.db
+    ports: ["3000:3000"]
+    volumes:
+      - platform-data:/app/var
+
+volumes:
+  platform-data:

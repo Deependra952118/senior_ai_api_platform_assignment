@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Near-real-time entitlement change feed. Newer than the nightly CSV export;
+     tier and renewal values here win over the CSV. -->
+<accounts generatedAt="2026-11-25T06:00:00Z">
+  <account id="ACC-007">
+    <tier>Platinum</tier>
+    <renewal>2027-01-15</renewal>
+  </account>
+  <account id="ACC-002">
+    <tier>Platinum</tier>
+    <renewal>2027-02-01</renewal>
+  </account>
+  <account id="ACC-005">
+    <tier>Gold</tier>
+    <renewal>2027-01-05</renewal>
+  </account>
+</accounts>

@@ -1,0 +1,11 @@
+node_modules/
+var/
+*.db
+*.db-*
+.env
+postman/environment.local.json
+mcp/audit.log
+mcp/evals/results/
+
+# assignment brief, not part of the submission
+*.pdf

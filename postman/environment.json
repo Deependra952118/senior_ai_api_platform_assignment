@@ -1,0 +1,33 @@
+{
+  "name": "Customer Platform - local",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "enabled": true
+    },
+    {
+      "key": "mocksUrl",
+      "value": "http://localhost:4010",
+      "enabled": true
+    },
+    {
+      "key": "token_support",
+      "value": "run: npm run -s token -- support-agent",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "token_lead",
+      "value": "run: npm run -s token -- support-lead",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "token_finance",
+      "value": "run: npm run -s token -- finance",
+      "type": "secret",
+      "enabled": true
+    }
+  ]
+}

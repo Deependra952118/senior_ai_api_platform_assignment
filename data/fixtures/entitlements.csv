@@ -1,0 +1,9 @@
+account_id,name,support_tier,contract_end,arr_usd
+ACC-001,Acme Corp,Platinum,2027-01-15,480000
+ACC-002,Northwind Traders,Platinum,2027-06-30,920000
+ACC-003,Brightline Health,Gold,2027-01-31,150000
+ACC-004,Kestrel Logistics,Platinum,2027-02-10,610000
+ACC-005,Halcyon Retail,Standard,2027-01-05,45000
+ACC-006,Orbital Media,Platinum,2026-12-20,1250000
+ACC-007,Lumen Data Systems,Platinum,2027-01-15,330000
+ACC-008,Pinecrest Bank,Platinum,2027-08-31,780000
